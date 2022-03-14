@@ -1,0 +1,44 @@
+<!-- How to apply the font-family, styling to fonts and understand the size for fonts -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <title>Fonts</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            line-height: 1.6em;
+        }
+
+        p {
+            font-family : Poppins, Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        #welcome p span {
+            font-weight: bold;
+        }
+
+        #about p span {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome" >
+        <h2 class="h2-heading-styling">Welcome</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae possimus quas ducimus, omnis <span>aliquam accusantium voluptas ipsa, dolorum iure ipsum eaque molestias.</span> Sequi deserunt delectus unde vero minus dolores doloribus?</p>
+    </div>
+
+    <div id="about" >
+        <h2 class="h2-heading-styling">About</h2>
+        <p>Lorem ipsum dolor <span>sit amet consectetur adipisicing elit.</span> Asperiores officiis ducimus excepturi voluptatum ab repellat dicta mollitia perspiciatis natus maiores.</p>
+    </div>
+</body>
+</html>

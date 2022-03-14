@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Styling</title>
+    <style>
+        body {
+            font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Nav bar styling */
+        .nav-bar {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            background: #4c6ca0;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .nav-bar li {
+            float: left;
+        }
+
+        .nav-bar li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 10px;
+        }
+
+        .nav-bar li a:hover {
+            background-color: #446190;
+            color: #f4f4f4;
+        }
+
+        /* Side menu styling */
+        .side-menu {
+            list-style: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 100px;
+            /* Unordered list has default padding of 40px by applying padding seperately this will be overriden */
+            padding: 20px;
+        }
+
+        .side-menu li {
+            font-size: 18px;
+            line-height: 1.5em;
+            border-bottom: dotted 1px black;
+        }
+
+        /* this is a pseudo selector for the last child of the undorder list*/
+        .side-menu li:last-child {
+            border: none;
+        }
+
+        .side-menu li a {
+            color: #333;
+            text-decoration:none; 
+        }
+
+        .side-menu li a:hover {
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav-bar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <ul class="side-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</body>
+</html>

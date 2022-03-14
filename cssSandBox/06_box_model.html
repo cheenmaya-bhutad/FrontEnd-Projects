@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Box Model / Margin & Padding</title>
+  <style>
+    /* By default the webpage has some applied padding and margin for selected elements we can set the default for the entire web page with CSS Reset. It will override the applied padding and margin */
+    /* Say that a h3 element which is block level element is given a width of 500 so any additions of padding,border and margin on the width side will result total as 500 if box-sizing property is specified. Same for height as well */
+    /* CSS Reset */
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box; /* This ensures that the padding,border and margin is applied to the element is displayed such that dimension of box if specified are maintained */
+    }
+
+    .box {
+        border: 2px solid black;
+        width: 500px;
+        /* Padding Syntax (applied equally to all sides of box) */
+        padding : 20px; /* This padding applied is added outside the width of div element if you check in web developement tools section */
+
+        /* Individual Padding */
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+
+        /* Combined syntax */
+        padding: 10px 20px 10px 20px;
+
+        /* Combined syntax short */
+        padding: 10px 20px;
+
+        /* Margin Syntax (applied equally to all sides of box) */
+        margin: 20px;
+
+        /* Individual Margin */
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+
+        /* Combined syntax */
+        margin: 10px 20px 10px 20px;
+
+        /* Combined syntax short */
+        margin: 10px 20px;
+    }
+
+    .box h3 {
+      margin-bottom: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3>Box 1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi incidunt repellendus cumque accusantium a sed voluptas ab dolorem nostrum vel.</p>
+  </div>
+  <div class="box">
+    <h3>Box 2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi incidunt repellendus cumque accusantium a sed voluptas ab dolorem nostrum vel.</p>
+  </div>
+</body>
+</html>

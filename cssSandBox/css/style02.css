@@ -1,0 +1,34 @@
+/* Single element selections */
+/* Element selection */
+body {
+    background-color: black;
+}
+
+/* Using id selection, # for id styling */
+#about {
+    color:white;
+}
+
+/* Using id selection, # for id styling */
+#welcome {
+    color:white;
+}
+
+/* Using class selection, . for class styling */
+.h2-heading-styling {
+    color:gold;
+}
+
+/* Multiple selectors */
+#welcome, #about {
+    background-color:crimson;
+    border:2px grey solid;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+/* Nested selection */
+/* Using nested selectors to change the font for about division */
+#about p {
+    font-size:large;
+}

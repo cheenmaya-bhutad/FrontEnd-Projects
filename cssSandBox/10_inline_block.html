@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline and Block Styling</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        ul {
+            max-width: 960px;
+            padding: 0px;
+        }
+        li {
+            display: inline;
+        }
+        li a {
+            margin-right: 5px;
+        }
+        /* In order to center the image with margin we need to turn it into block element first. this is true for all inline elements(need to check)*/
+        img {
+            display: block;
+            margin: auto;
+        }
+        .box {
+            display: inline-block;
+            background-color: #f4f4f4;
+            margin-bottom: 5px;
+            padding: 10px;
+            width: 33%;
+        }
+
+        .box p {
+            text-align: justify;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Tech</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Startups</a></li>
+        <li><a href="#">Economy</a></li>
+    </ul>
+    <br>
+    <br>
+
+    <img src="./img/leaf.png" alt="a leaf hallmark">
+    <!-- The second image added will be inline only -->
+    
+    <div class="box">
+        <h3>Box1</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, dolor repellendus. Nisi provident magni accusantium quis quam aliquid voluptatibus illum.
+        </p>
+    </div>
+    <div class="box">
+        <h3>Box2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam iusto culpa, aliquam doloremque debitis inventore placeat dolores modi repellendus provident!</p>
+    </div>
+    <div class="box">
+        <h3>Box3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam iusto culpa, aliquam doloremque debitis inventore placeat dolores modi repellendus provident!</p>
+    </div>
+</body>
+</html>

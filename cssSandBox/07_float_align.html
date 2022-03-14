@@ -1,0 +1,88 @@
+<!-- 1. How to center the elements to center with equal margins on both side -->
+<!-- Ans Wrap the all elements if they are to be centered in a one container as shown below with div element with class container. Now we style it with the require width of our content and then give margin as auto.-->
+<!-- 2. Issue with setting width if we minimize the browser window then the content is not adjusted accordingly that is the width remains fixed if the browser window is made smaller than width specified (related to responsive design)-->
+<!-- Ans We must set the width as max-width property to make it responsive to the browser window.-->
+<!-- 3. How to align text -->
+<!-- Ans Use text-align property with four values : left, right, center, justify -->
+<!-- 4. How to float elements -->
+<!-- Ans Use float property. With any float the elements we must specify the width for each of them. Also use box-sizing property to fit the elements in the width with Css Reset. Also we must clear the floats after use so that next element defined will not be affected due to this.-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Float & Align</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .body {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+    }
+
+    /* Used to clear the floats on left and right*/
+    .clr {
+      clear: both;
+    }
+
+    .box {
+      background-color: #f4f4f4;
+      color: #333;
+      border: 1px solid black;
+      padding : 5px;
+      margin-bottom: 15px;
+    }
+
+    .box p {
+      /* Text align */
+      text-align : left; /* default case */
+      text-align : right;
+      text-align : center;
+      text-align : justify;
+    }
+
+    #box-2 {
+      float: left;
+      width: 68%; /*With respect to parent element container with width 960px*/
+    }
+
+    #box-3 {
+      float: right;
+      width : 30%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="box-1" class="box">
+      <h3>Box1</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, nam adipisci iure corrupti cupiditate dolor vel? Obcaecati consectetur totam assumenda at, libero sit adipisci! In sequi optio iste provident voluptas.</p>
+    </div>
+    <div id="box-2" class="box">
+      <h3>Box2</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, nam adipisci iure corrupti cupiditate dolor vel? Obcaecati consectetur totam assumenda at, libero sit adipisci! In sequi optio iste provident voluptas.</p>
+    </div>
+    <div id="box-3" class="box">
+      <h3>Box3</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, nam adipisci iure corrupti cupiditate dolor vel? Obcaecati consectetur totam assumenda at, libero sit adipisci! In sequi optio iste provident voluptas.</p>
+    </div>
+    <!-- Using the clr class in div element to clear the floats applied above -->
+    <div class="clr"></div>
+    <div id="box-4" class="box">
+      <h3>Box4</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolorem, in quaerat dolor quisquam, laboriosam asperiores quo autem architecto velit quibusdam! Ad culpa, officiis quisquam tempora facilis nobis laborum consequuntur.</p>
+    </div>
+  </div>
+</body>
+</html>

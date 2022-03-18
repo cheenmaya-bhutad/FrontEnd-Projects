@@ -1,3 +1,4 @@
+
 /* CSS Reset*/
 * {
     margin: 0;
@@ -147,13 +148,13 @@ p {
     width: 50%;
     float: left;
     background: url('../img/photo-1.jpg') no-repeat center center/cover;
-    min-height: 100%;
+    height: 100%;
 }
 
 #home-history .home-history-text {
     float: right;
     width: 50%;
-    min-height: 100%;
+    height: 100%;
     text-align: center;
     padding: 162.03px 30px;
     overflow: hidden;
@@ -240,7 +241,7 @@ p {
 }
 
 #reviews .review-box {
-    max-width: 100%;
+    width: 100%;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;

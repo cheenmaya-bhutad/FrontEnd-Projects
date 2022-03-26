@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex basics</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /*The flex display helps to convert the div with this class as flex container. By default all the other added new elements in this container will be floated in row*/
+        .flex-container {
+            display: flex; /* Direction is along main axis */
+        }
+        
+        .flex-container1 {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .item {
+            background: #f4f4f4;
+            border: #ccc solid 2px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            width: 30%;
+            flex-shrink: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="item item1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item item2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item item3">
+            <h3>Item3</h3>
+        </div>
+    </div>    
+
+    <div class="flex-container1">
+        <div>
+            <h2>Default case</h2>
+            <img src="/cssSandBox/img/flex-row-default.jpg" alt="default case">
+        </div>
+        <div>
+            <h2>Column case</h2>
+            <img src="/cssSandBox/img/flex-column.jpg" alt="column case">
+        </div>
+        <div>
+            <h2>Row reverse case</h2>
+            <img src="/cssSandBox/img/flex-row-reverse.jpg" alt="row reverse case">
+        </div>
+        <div>
+            <h2>Default case</h2>
+            <img src="/cssSandBox/img/flex-column-reverse.jpg" alt="column reverse case">
+        </div>
+    </div>
+</body>
+</html>

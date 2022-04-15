@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth child selector</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+
+        li {
+            padding: 0.25rem;
+        }
+
+        /*In order to select the various list items present in the list we can use nth child selector */
+        /*selecting the first child*/ 
+        li:first-child {
+            background-color: orange;
+        }
+
+        /*selecting the last child*/
+        li:last-child {
+            background-color: teal;
+        }
+
+        /*To select let say the 5 li element we can use the nth child selector. Indexing starts from 1*/
+        li:nth-child(5) {
+            background-color: purple;
+        }
+
+        /*To select multiple elements following a pattern say every third list item that means 3rd, 6th and so on.
+        Here 3n will start from 3 and go upto the value < last index */
+        li:nth-child(3n) {
+            background-color: coral;
+        }
+        
+        /*To select elements in a pattern after skipping a few elements we can use offset.Here the element where this effect will start is 8 and then we skip 3 and select element so it will be 8,11,14 and so on*/
+        li:nth-child(3n + 8) {
+            background-color: greenyellow;
+            color: #333;
+        }
+
+        /*We can also specify the even and odd position for selection*/
+        li:nth-child(even) {
+            background-color: burlywood;
+        }
+
+        li:nth-child(odd) {
+            background-color: forestgreen;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+        <li>Item 11</li>
+        <li>Item 12</li>
+        <li>Item 13</li>
+        <li>Item 14</li>
+        <li>Item 15</li>
+        <li>Item 16</li>
+        <li>Item 17</li>
+        <li>Item 18</li>
+        <li>Item 19</li>
+        <li>Item 20</li>
+    </ul>
+</body>
+</html>

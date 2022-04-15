@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="state">
+        <div class="container">
+            <h1>Generate a <br/><span class="text-primary">Random Password</span></h1>
+            <p>Never use an insecure password again</p>
+            <button onclick="generatePasswords()" class="passwordGen">
+                <div class="bolt-class">
+                    <i class="fa fa-bolt"></i>
+                </div>
+                <p>Password Generator</p></button>
+            <hr/>
+            <input id="pwd-el1" type="text" name="password1" class="passwordStyle" placeholder="...">
+            <input id="pwd-el2" type="text" name="password1" class="passwordStyle" placeholder="...">
+            <input id="pwd-el3" type="text" name="password1" class="passwordStyle" placeholder="...">
+            <input id="pwd-el4" type="text" name="password1" class="passwordStyle" placeholder="...">
+
+            <input type="text" id="user-input" name="user-input" class="passwordStyle" placeholder="Enter between 9-15 for password length" value="">
+
+            <button class="copyPwds" onclick="copyPasswords()">Copy Passwords</button>
+        </div>    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

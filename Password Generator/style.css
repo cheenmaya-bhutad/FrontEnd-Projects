@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.state {
+    width: 700px;
+    height: 600px;
+    margin: 30px auto;
+    background: #881337;
+    border-radius: 5px;
+    box-shadow: 2.5px 2.5px #f4f4f4;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    padding: 50px 0px; 
+}
+
+.container h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.text-primary {
+    color: #DDD6FE; 
+}
+
+.container p {
+    padding: 5px 0px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.passwordGen {
+    width: 210px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #FDA4AF;
+    box-shadow: 1px 1px #f4f4f4;
+}
+
+.bolt-class {
+    margin-right: 2.5px;
+    height: 24px;
+    padding: 2.5px;
+}
+
+.bolt-class i {
+    height: 15px;
+    width: 15px;
+}
+
+.passwordGen p {
+    font-size: 15px;
+    font-weight: 400;
+    height: 24px;
+    padding: 2.5px;
+}
+
+hr {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 0.25px;
+}
+
+.passwordStyle {
+    width: 45%;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 2.5px 0px;
+    background-color: #C4B5FD;
+    color: #333;
+    font-weight: 400;;
+}
+
+#pwd-el1, #pwd-el3 {
+    margin-right: 28px;
+    margin-bottom: 20px;
+}
+
+#pwd-el2, #pwd-el4 {
+    margin-left: 28px;
+    margin-bottom: 20px;
+}
+
+.copyPwds {
+    display: block;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #333;
+    background-color: #FDA4AF;
+    box-shadow: 1px 1px #f4f4f4;
+}
+
+
+
+
+
+

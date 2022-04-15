@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After selectors</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /*Before and after selector allows us to select the areas at the extremes of the element.
+        So in this case before p element after header we can use before and content attribute to enter some content to be printed befor the p element and style it as well.
+        Same way we can use after to access the after area*/
+        /*Applying this concept to images allow us to create a transparent background and create a good looking landing page */
+        header {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: url('/gwenn-klabbers-c7LAwY4LnqU-unsplash.jpg') no-repeat center center/cover;
+            height: 50vh;
+            opacity: 0.3; 
+            /*Till this point you can see the effect of transparency but it also applies to the content in the header. This is because they are position at same level. To make the content appear above the background set the z-index for before to less value than 1*/
+            z-index: -1;
+        }
+
+
+        header + p:before {
+            content: 'Before the paragraph';
+            padding: 0 0.25rem;
+            margin: 0 0.25rem;
+            background-color: aqua;
+            color: #333;
+        }
+
+        header + p:after {
+            content: 'After the paragraph';
+            padding: 0 0.25rem;
+            margin: 0 0.25rem;
+            background-color: lightsalmon;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Heading 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempora repudiandae voluptate similique cum consequuntur facere assumenda reiciendis, consequatur est.</p>
+    </header>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, quaerat?</p>
+</body>
+</html>

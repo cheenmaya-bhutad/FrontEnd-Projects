@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadows</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        /*Box shadow is applied horizontal and vertical so we habe to specify the offset-x and offset-y. 
+        Along with this we can specify the color for the shadow as well.
+        We can blur the radius as well using blur-radius attribute.
+        Now we can apply the shadow to opposite of current horizontal and vertical directions using negative values.
+        We can apply multiple shadows as well using combinations*/
+        
+        /* All of this is a single combo*/
+        /*box-shadow: 0.25rem 0.25rem orange;*/
+        /*box-shadow: 0.25rem 0.25rem 5px(for blur) orange;*/
+        /*box-shadow: -0.25rem -0.25rem orange;*/
+        /*box-shadow: -0.25rem -0.25rem orange,-0.25rem -0.25rem pink;*/
+
+        .box {
+            background-color: teal;
+            color: #f4f4f4;
+            margin: 0 1rem;
+            text-align: center;
+            box-shadow: -0.25rem -0.25rem orange,0.25rem 0.25rem pink;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae tenetur delectus sit ullam exercitationem expedita cumque iste, itaque eveniet aliquid!</p>
+        </div>
+        <div class="box">
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae tenetur delectus sit ullam exercitationem expedita cumque iste, itaque eveniet aliquid!</p>
+        </div>
+        <div class="box">
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae tenetur delectus sit ullam exercitationem expedita cumque iste, itaque eveniet aliquid!</p>
+        </div>
+    </div>
+</body>
+</html>

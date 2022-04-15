@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeted Selectors</title>
+    <style>
+        /* Direct target */
+        /* This targets the second mentioned elements present in the first mentioned element. so the second elements must be direct child and first is the parent. 
+        So it will check for all the p elements in the div element. 
+        This however does not target the p element  in the ul since li element is the parent and not div.*/
+        div > p {
+            color: teal;
+        }
+
+        /* To target the p element in ul*/
+        li > p {
+            color: darkorange;
+        }
+
+        /* Direct after target */
+        /* In order to target paragraph element directly after the div element we use direct after. 
+        Targets only the first after occurence of the second element. */
+        div + p {
+            color: grey;
+        }
+
+        /* To target the links with a target attribute we can use below*/
+        a[target] {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /*We can do the same to target specific input elements using the type attribute */
+        /* Here we are targeting only the text and email type of inputs. */
+        input[type='text'], input[type='email'] {
+            width: 90%;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quas.</p>
+
+        <ul>
+            <li>Item 1</li>
+            <li><p>Item 2</p></li> 
+            <li>Item 3</li>
+        </ul>
+
+    </div>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, quisquam.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, quisquam.</p>
+
+    <a href="#">Link 1</a>
+    <br/>
+    <a href="#">Link 2</a>
+    <br/>
+    <a href="#" target="_blank">Link 3</a>
+
+    <form action="#">
+        <input type="text" name="name" id="name">
+        <input type="email" name="email" id="email">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

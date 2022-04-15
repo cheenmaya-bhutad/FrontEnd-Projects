@@ -37,7 +37,6 @@ function Pwds(len) {
 */
 function generatePasswords() {
     len = document.getElementById("user-input").value;
-    console.log(len);
     if(len > 8 && len < 16) {
         Pwds(len);
     }  else {

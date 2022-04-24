@@ -1,0 +1,137 @@
+:root {
+    --page-1 : #B6FFCE;
+    --page-2 : #F6FFA4;
+    --page-3 : #FDD7AA;
+    --page-4 : #FFA8A8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    overflow: hidden;    
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+section > div {
+    margin-top: 1rem;
+}
+
+#page-1 {
+    background-color: var(--page-1);
+}
+
+#page-1 h1 {
+    animation-name: headerMovement;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes headerMovement {
+    from {
+        transform: translateY(-900px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+#page-1 p {
+    animation-name: paraMovement;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes paraMovement {
+    from {
+        transform: translateX(-900px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+#page-2 {
+    background-color: var(--page-2);
+}
+
+#page-3 {
+    background-color: var(--page-3);
+}
+
+#page-4 {
+    background-color: var(--page-4);
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.page h1 {
+    line-height: 1.5;
+    font-size: 4rem;
+    margin: 1rem 0;
+    font-style: bold;
+}
+
+.page p {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin: 1rem;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.btn:hover, .btn-dark {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin: 1rem;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.btn-dark:hover {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+

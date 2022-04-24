@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations with Keyframes</title>
+    <style>
+
+        /*Animations in CSS */
+
+        /*We can perform animations in CSS using keyframes which changes the property values specified in it.*/
+
+        body {
+            background-color: #333;
+        }
+
+        .box {
+            background-color: #f4f4f4;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation-name : animate1; /*This is the name of animation we configure using keyframes*/
+            animation-duration: 5s; /*This is the overall duration of animation we configure using keyframes*/
+            animation-delay: 2s; /*This is the delay after which animation will start*/
+            animation-fill-mode: forwards; /*This is the mode of animation which how the element will be after animation ends*/
+            animation-iteration-count: infinite; /*Determines the iterations for which animation will run*/
+            animation-timing-function: ease-in-out; /*This indicates how the animation will behave with change of times that is in this case the animation will be slow in start and end of the animation duration*/
+        }
+
+        /*Keyframes here determine what the animation will do. Here it starts from when top is 0  and goes to width being increased to 600px,background-color changed to lightcoral and top being 500px from top;*/
+        @keyframes animate1 {
+            from {
+                top: 0;
+            }
+
+            to {
+                width: 600px;
+                background-color: lightcoral;
+                top: 500px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

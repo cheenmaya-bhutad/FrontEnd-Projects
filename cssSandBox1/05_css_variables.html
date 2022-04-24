@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        /* CSS Variables */ 
+
+        /* CSS variables can be considered as containers in which we can store values and use them later. The variables are defined in scope of an element. Say we want to assign  background color for h1 and it may be changed later on and this color theme is common for all h1 in the page then we can put it in the root element scope so that is will be available for all the elements in the document body. 
+        
+        Syntax for variables -> --varname : value;
+        */
+
+        :root {
+            --primary-color: steelblue;
+            --secondary-color: skyblue;
+        }
+
+        .container {
+            --max-width: 1100px;
+        }
+
+        .box-1 {
+            --flex1 : 1;
+        }
+
+        .box-2 {
+            --flex2 : 2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+
+        header {
+            line-height: 2rem;
+            padding: 1rem;
+            text-align: center;
+            background-color: var(--primary-color); /*Using the css variable defined earlier*/
+            border-bottom: 5px var(--secondary-color) solid;
+        }
+
+        .container {
+            display: flex;
+            width: var(--max-width); /*We can convert this into a css variable as well with scope being container*/
+            margin: auto;
+        }
+
+        .box {
+            background-color: var(--primary-color);
+            border-bottom: 5px var(--secondary-color) solid;
+            margin: 1rem;
+            padding: 1rem;
+        }
+
+        /* Using variables to set the flex values */
+        
+        .box-1 {
+            flex: var(--flex1); 
+        }
+
+        .box-2 {
+            flex: var(--flex2);
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Variables</h1>
+    </header>
+
+    <div class="container">
+        <div class="box box-1">
+            <h2>Heading 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugit ab, beatae tenetur voluptatibus inventore doloremque voluptatum mollitia cum in?</p>
+        </div>
+        <div class="box box-2">
+            <h2>Heading 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugit ab, beatae tenetur voluptatibus inventore doloremque voluptatum mollitia cum in?</p>
+        </div>
+    </div>
+</body>
+</html>

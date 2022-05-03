@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@400;700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-bottom: 10px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+main {
+    height: 100vh;
+    background-color: hsl(212, 45%, 89%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.QRcode {
+    width: 350px;
+    height: 550px;
+    margin: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 15px;
+    box-shadow: 2px 2px 2px hsl(220, 15%, 55%);
+}
+
+.QRcode img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.QRcode h1 {
+    font-size: 20px;
+    margin: 20px 15px;
+    text-align: center;
+    font-weight: 700px;
+}
+
+.QRcode p {
+    margin: 0 15px;
+    text-align: center;
+    font-weight: 400px;
+    color: hsl(220, 15%, 55%);
+}
+
+@media(max-width: 375px) {
+    
+    .QRcode {
+        width: 275px;
+        height: 450px;
+    }
+}
+
+
+

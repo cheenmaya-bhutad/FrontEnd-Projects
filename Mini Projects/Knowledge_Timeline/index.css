@@ -38,11 +38,13 @@
     color: #f4f4f4;
 }
 
+/* Create line */
 #timeline ul li {
+    position: relative;
     list-style: none;
     width: 6px;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 2rem 0;
     background-color: #f4f4f4;
 }
 
@@ -63,7 +65,96 @@
     text-align: justify;
 }
 
-#timeline ul li:nth-child(odd) {
+/*Targets the div elements in the list items*/
+/*Right side placement for odd elements*/
+#timeline ul li:nth-child(odd) div {
     left: 40px;
 }
 
+/*Left side placement for even elements*/
+#timeline ul li:nth-child(even) div {
+    left: -464px;
+} 
+
+/*Dots to represent a event on timeline*/
+#timeline ul li:after {
+    content : '';
+    left: 50%;
+    bottom: 30px;
+    position : absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-color);
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+/*Arrow Base*/
+#timeline ul li div:before {
+    content: '';
+    width: 0;
+    height: 0;
+    bottom: 5px;
+    position: absolute;
+    border-style: solid;
+}
+
+/*Right side arrow*/
+#timeline ul li:nth-child(odd) div:before {
+    left: -15px;
+    border-top-width: 8px;
+    border-right-width: 16px;
+    border-bottom-width: 8px;
+    border-left-width: 0px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: var(--primary-color);
+}
+
+/*Left side arrow*/
+#timeline ul li:nth-child(even) div:before {
+    right: -15px;
+    border-top-width: 8px;
+    border-right-width: 0px;
+    border-bottom-width: 8px;
+    border-left-width: 16px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: var(--primary-color);
+}
+
+@media(max-width: 900px) {
+    #timeline ul li div {
+        width: 250px;
+    }
+
+    #timeline ul li:nth-child(even) div {
+        left: -314px;
+    }   
+}
+
+@media(max-width: 600px) {
+    #timeline ul li {
+        margin-left: 40px;
+    }
+
+    #timeline ul li div {
+        width: calc(100vw - 140px);
+    }
+
+    #timeline ul li:nth-child(even) div {
+        left: 40px;
+    }
+
+    #timeline ul li:nth-child(even) div:before {
+        left: -15px;
+        border-top-width: 8px;
+        border-right-width: 16px;
+        border-bottom-width: 8px;
+        border-left-width: 0px;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: var(--primary-color);
+    }
+}
